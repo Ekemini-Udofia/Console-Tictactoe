@@ -77,7 +77,7 @@ void create_board()
 
 int main(int argv, char* argc[])
 {
-	int player = 1, i, choice;
+	int player = 1, won, choice;
 	char mark;
 
 	do
@@ -133,17 +133,19 @@ int main(int argv, char* argc[])
 			std::cin.get();
 		}
 
-		i = check_for_win();
+		won = check_for_win();
 		player++;
-	} while (i == -1);
+	} while (won == -1);
 	create_board();
-	if (i == 1)
+	if (won == 1)
 	{
 		std::cout << "\n Conragts, Player " << player << " has won";
+		system("PAUSE");
 	}
 	else
 	{
 		std::cout << "\n Draw";
+		system("PAUSE");
 	}
 	std::cin.ignore();
 	std::cin.get();
