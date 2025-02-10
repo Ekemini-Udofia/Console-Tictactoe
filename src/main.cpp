@@ -45,9 +45,35 @@ int check_for_win()
 	{
 		return 0;
 	}
+	else
+	{
+		return -1;
+	}
 }
 
+void create_board()
+{
+	system("cls");
+	std::cout << "\n\n\t A  simple Tictactoe Console Game \n\n";
 
+	std::cout << "The first player X and the second is O \n\n";
+	std::cout << std::endl;
+
+	std::cout << "   |   |   " << std::endl;
+	std::cout << " " << square[1] << " | " << square[2] << " | " << square[3] << " " << std::endl;
+
+	std::cout << "___|___|___" << std::endl;
+	std::cout << "   |   |   " << std::endl;
+
+	std::cout << " " << square[4] << " | " << square[5] << " | " << square[6] << " " << std::endl;
+
+	std::cout << "___|___|___" << std::endl;
+	std::cout << "   |   |   " << std::endl;
+
+	std::cout << " " << square[7] << " | " << square[8] << " | " << square[9] << " " << std::endl;
+	std::cout << "   |   |   " << std::endl;
+
+}
 
 int main(int argv, char* argc[])
 {
